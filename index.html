@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The Taste Budz Fusion Restro — food, ambience and a memorable dining experience.">
+<title>The Taste Budz | Fusion Restro</title>
+<style>
+:root{--bg:#0b0b0a;--panel:#151411;--cream:#fff8e9;--gold:#e8b44d;--gold2:#ffd777;--text:#f7f3ea;--muted:#aaa49a;--line:#ffffff18}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+a{text-decoration:none;color:inherit}
+img{display:block;max-width:100%}
+.topbar{background:#050505;text-align:center;color:#ddd;font-size:12px;padding:8px 15px;border-bottom:1px solid var(--line)}
+header{position:sticky;top:0;z-index:100;background:rgba(11,11,10,.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.nav{max-width:1180px;margin:auto;padding:15px 22px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.logo{font-family:Georgia,serif;font-size:21px;font-weight:900;letter-spacing:.8px;color:var(--gold2)}
+.logo small{display:block;font-family:inherit;font-size:9px;letter-spacing:2.2px;color:#eee}
+nav{display:flex;gap:24px;color:#ddd;font-size:14px}
+nav a:hover{color:var(--gold2)}
+.nav-cta{padding:9px 14px;border:1px solid #e8b44d66;border-radius:999px;color:var(--gold2);font-weight:800;font-size:13px}
+.hero{min-height:88vh;position:relative;display:flex;align-items:center;background:
+linear-gradient(90deg,#050504f2 0%,#050504a8 45%,#05050430 100%),
+url("photo-1.png") center/cover}
+.hero-inner{width:100%;max-width:1180px;margin:auto;padding:90px 22px;position:relative}
+.eyebrow{display:inline-block;color:var(--gold2);font-weight:900;font-size:12px;letter-spacing:2px;text-transform:uppercase;border:1px solid #e8b44d55;padding:7px 12px;border-radius:999px;background:#e8b44d10}
+h1{font-family:Georgia,serif;font-size:clamp(48px,7vw,82px);line-height:.98;max-width:800px;margin:20px 0 18px}
+.hero p{max-width:590px;color:#e5e0d7;font-size:18px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{padding:13px 19px;border-radius:9px;font-weight:900;display:inline-flex;align-items:center;gap:8px;transition:.2s}
+.btn.gold{background:var(--gold);color:#15120c}.btn.gold:hover{background:var(--gold2);transform:translateY(-2px)}
+.btn.outline{border:1px solid #fff4;color:#fff}.btn.outline:hover{border-color:var(--gold);color:var(--gold2)}
+.quick{max-width:900px;margin:-42px auto 0;position:relative;z-index:4;padding:0 22px}
+.quick-grid{display:grid;grid-template-columns:repeat(3,1fr);background:#171613e8;border:1px solid var(--line);border-radius:18px;overflow:hidden;backdrop-filter:blur(14px)}
+.q{padding:22px;text-align:center;border-right:1px solid var(--line)}.q:last-child{border:0}
+.q strong{display:block;color:var(--gold2);font-size:17px}.q span{color:#aaa;font-size:12px}
+section{padding:90px 22px}
+.container{max-width:1180px;margin:auto}
+.kicker{color:var(--gold);font-size:12px;font-weight:900;letter-spacing:2px;text-transform:uppercase}
+.title{font-family:Georgia,serif;font-size:42px;line-height:1.1;margin:8px 0 13px}
+.lead{color:var(--muted);max-width:680px}
+.about{background:var(--cream);color:#1b1915}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+.about-photo img{width:100%;height:560px;object-fit:cover;border-radius:20px}
+.about-copy p{color:#625d55;margin:17px 0}
+.points{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:22px}
+.point{font-weight:800}.point b{color:#b67e16;margin-right:6px}
+.menu{background:var(--panel)}
+.menu-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:30px}
+.menu-note{color:#888;font-size:12px;max-width:300px;text-align:right}
+.menu-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.menu-card{background:#1c1a16;border:1px solid var(--line);border-radius:18px;padding:24px}
+.menu-card h3{font-family:Georgia,serif;color:var(--gold2);font-size:24px;margin-bottom:13px}
+.item{display:flex;justify-content:space-between;gap:15px;padding:10px 0;border-bottom:1px dashed #ffffff20}
+.item:last-child{border:0}.price{font-weight:900;color:#f6cf79;white-space:nowrap}
+.gallery-grid{display:grid;grid-template-columns:1.3fr .7fr .7fr;grid-auto-rows:240px;gap:14px}
+.gallery-grid img{width:100%;height:100%;object-fit:cover;border-radius:16px}
+.gallery-grid .tall{grid-row:span 2}
+.hours{background:#11100e}
+.hours-card{margin-top:28px;background:#181713;border:1px solid var(--line);border-radius:18px;padding:28px;display:flex;justify-content:space-between;align-items:center;gap:20px}
+.hours-card strong{color:var(--gold2);font-size:20px}.hours-card span{display:block;color:#999;font-size:13px}
+.cta-section{background:linear-gradient(135deg,#1d1710,#0d0d0c);text-align:center}
+.cta-section .lead{margin:0 auto}
+.contact-actions{justify-content:center}
+footer{background:#050505;border-top:1px solid var(--line);padding:32px 22px;color:#888}
+.footer-inner{max-width:1180px;margin:auto;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer strong{color:var(--gold2)}
+@media(max-width:850px){
+nav{display:none}.about-grid{grid-template-columns:1fr}.about-photo img{height:420px}
+.menu-grid{grid-template-columns:1fr}.gallery-grid{grid-template-columns:1fr 1fr}.gallery-grid .tall{grid-row:span 1}
+}
+@media(max-width:560px){
+.hero{min-height:80vh}.hero-inner{padding:65px 20px}h1{font-size:51px}.hero p{font-size:16px}
+.quick{margin-top:-24px}.quick-grid{grid-template-columns:1fr}.q{border-right:0;border-bottom:1px solid var(--line)}.q:last-child{border-bottom:0}
+section{padding:65px 18px}.title{font-size:34px}.points{grid-template-columns:1fr}
+.gallery-grid{grid-template-columns:1fr;grid-auto-rows:250px}.gallery-grid .tall{grid-row:span 1}
+.hours-card{display:block}.hours-card .btn{margin-top:18px}
+}
+</style>
+</head>
+<body>
+<div class="topbar">✨ FUSION RESTRO &nbsp; • &nbsp; 🍽️ DINE • RELAX • ENJOY &nbsp; • &nbsp; 🕐 7:00 AM – 11:00 PM</div>
+
+<header>
+<div class="nav">
+<a class="logo" href="#home">THE TASTE BUDZ<small>FUSION RESTRO</small></a>
+<nav><a href="#about">About</a><a href="#menu">Menu</a><a href="#gallery">Gallery</a><a href="#hours">Hours</a></nav>
+<a class="nav-cta" href="#menu">View Menu</a>
+</div>
+</header>
+
+<main>
+<section class="hero" id="home">
+<div class="hero-inner">
+<div class="eyebrow">The Taste Budz • Fusion Restro</div>
+<h1>Where every bite tells a story.</h1>
+<p>A stylish dining experience with a warm ambience, inviting tables and a menu made for good food and good company.</p>
+<div class="actions">
+<a class="btn gold" href="#menu">🍽 Explore Menu</a>
+<a class="btn outline" href="#gallery">📸 View Gallery</a>
+</div>
+</div>
+</section>
+
+<div class="quick"><div class="quick-grid">
+<div class="q"><strong>7:00 AM – 11:00 PM</strong><span>Opening hours • All days</span></div>
+<div class="q"><strong>Fusion Restro</strong><span>Food • Coffee • Beverages</span></div>
+<div class="q"><strong>Fresh & Comfortable</strong><span>Dining atmosphere</span></div>
+</div></div>
+
+<section class="about" id="about"><div class="container about-grid">
+<div class="about-photo"><img src="photo-2.png" alt="The Taste Budz Fusion Restro exterior"></div>
+<div class="about-copy">
+<div class="kicker">Welcome to The Taste Budz</div>
+<h2 class="title">A place made for food, friends & good moments.</h2>
+<p>The Taste Budz is a Fusion Restro designed to bring together a welcoming atmosphere and a varied menu of breads, rice, salads, soups and hot & cold beverages.</p>
+<p>Whether you are stopping for a quick drink or sitting down for a full meal, make yourself comfortable and enjoy the experience.</p>
+<div class="points">
+<div class="point"><b>✓</b>Warm ambience</div>
+<div class="point"><b>✓</b>Fresh menu choices</div>
+<div class="point"><b>✓</b>Comfortable seating</div>
+<div class="point"><b>✓</b>Family & friends</div>
+</div>
+</div>
+</div></section>
+
+<section class="menu" id="menu"><div class="container">
+<div class="menu-head">
+<div><div class="kicker">Our menu</div><h2 class="title">Food & beverages</h2><p class="lead">Prices below are transcribed from the supplied menu image.</p></div>
+<div class="menu-note">Opening time shown on the supplied menu: 7 a.m. to 11:00 p.m.</div>
+</div>
+
+<div class="menu-grid">
+<div class="menu-card"><h3>🥖 Breads</h3>
+<div class="item"><span>Tawa Roti</span><span class="price">₹5</span></div>
+<div class="item"><span>Tawa Roti Butter</span><span class="price">₹7</span></div>
+<div class="item"><span>Tandoori Roti</span><span class="price">₹6</span></div>
+<div class="item"><span>Tandoori Roti Butter</span><span class="price">₹8</span></div>
+<div class="item"><span>Plain Naan</span><span class="price">₹30</span></div>
+<div class="item"><span>Butter Naan</span><span class="price">₹35</span></div>
+<div class="item"><span>Missi Roti</span><span class="price">₹25</span></div>
+<div class="item"><span>Missi Roti Butter</span><span class="price">₹30</span></div>
+<div class="item"><span>Lachcha Paratha</span><span class="price">₹30</span></div>
+</div>
+
+<div class="menu-card"><h3>🍚 Rice</h3>
+<div class="item"><span>Plain Rice</span><span class="price">₹40</span></div>
+<div class="item"><span>Jeera Rice</span><span class="price">₹50</span></div>
+<div class="item"><span>Veg Pulao</span><span class="price">₹70</span></div>
+<div class="item"><span>Mutter Pulao</span><span class="price">₹60</span></div>
+<div class="item"><span>Kashmiri Pulao</span><span class="price">₹90</span></div>
+</div>
+
+<div class="menu-card"><h3>🥗 Salad • Raita • Papad</h3>
+<div class="item"><span>Green Salad</span><span class="price">₹40</span></div>
+<div class="item"><span>Pyaz Salad</span><span class="price">₹20</span></div>
+<div class="item"><span>Plain Dahi</span><span class="price">₹30</span></div>
+<div class="item"><span>Veg Raita</span><span class="price">₹50</span></div>
+<div class="item"><span>Boondi Raita</span><span class="price">₹50</span></div>
+<div class="item"><span>Plain Papad</span><span class="price">₹10</span></div>
+<div class="item"><span>Fry Papad</span><span class="price">₹20</span></div>
+<div class="item"><span>Fry Masala Papad</span><span class="price">₹30</span></div>
+</div>
+
+<div class="menu-card"><h3>🍲 Soup</h3>
+<div class="item"><span>Tomato Soup</span><span class="price">₹60</span></div>
+<div class="item"><span>Hot & Sour Soup</span><span class="price">₹75</span></div>
+<div class="item"><span>Veg Soup</span><span class="price">₹75</span></div>
+</div>
+
+<div class="menu-card"><h3>☕ Hot & Cold Beverages</h3>
+<div class="item"><span>Plain Tea</span><span class="price">₹10</span></div>
+<div class="item"><span>Masala Tea</span><span class="price">₹15</span></div>
+<div class="item"><span>Lemon Ice-Tea</span><span class="price">₹30</span></div>
+<div class="item"><span>Hot Coffee</span><span class="price">₹20</span></div>
+<div class="item"><span>Cold Coffee</span><span class="price">₹40</span></div>
+<div class="item"><span>Cold Coffee with Ice-Cream</span><span class="price">₹50</span></div>
+<div class="item"><span>Hot Milk</span><span class="price">₹25</span></div>
+<div class="item"><span>Nimbu Pani</span><span class="price">₹20</span></div>
+<div class="item"><span>Jeera Chhach</span><span class="price">₹15</span></div>
+<div class="item"><span>Sweet Lassi</span><span class="price">₹30</span></div>
+<div class="item"><span>Namkeen Lassi</span><span class="price">₹30</span></div>
+</div>
+</div>
+</div></section>
+
+<section id="gallery"><div class="container">
+<div class="kicker">Gallery</div><h2 class="title">The Taste Budz experience</h2><p class="lead" style="margin-bottom:28px">A visual look at the restaurant, seating and dining atmosphere.</p>
+<div class="gallery-grid">
+<img class="tall" src="photo-1.png" alt="Restaurant interior">
+<img src="photo-2.png" alt="Restaurant entrance">
+<img src="photo-3.jpg" alt="Restaurant dining">
+<img src="photo-4.jpg" alt="Dining table">
+<img src="photo-5.jpg" alt="Restaurant interior">
+<img class="tall" src="photo-6.jpg" alt="Restaurant dining area">
+</div>
+</div></section>
+
+<section class="hours" id="hours"><div class="container">
+<div class="kicker">Plan your visit</div><h2 class="title">Opening hours</h2>
+<div class="hours-card"><div><strong>Every day • 7:00 AM – 11:00 PM</strong><span>Opening time shown on the supplied menu.</span></div><a class="btn gold" href="#menu">See Menu →</a></div>
+</div></section>
+
+<section class="cta-section"><div class="container">
+<div class="kicker">The Taste Budz</div><h2 class="title">Good food deserves good company.</h2>
+<p class="lead">Save the restaurant website and share it with your family and friends.</p>
+<div class="actions contact-actions"><a class="btn gold" href="#menu">🍽 View Menu</a><a class="btn outline" href="#gallery">📸 Gallery</a></div>
+</div></section>
+</main>
+
+<footer><div class="footer-inner"><div><strong>THE TASTE BUDZ</strong><br>Fusion Restro</div><div>7:00 AM – 11:00 PM • All Days</div><div>© 2026 The Taste Budz</div></div></footer>
+</body>
+</html>
